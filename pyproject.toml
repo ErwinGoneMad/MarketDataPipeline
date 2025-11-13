@@ -1,0 +1,31 @@
+[project]
+name = "market-data-pipeline"
+version = "0.1.0"
+description = "High-volume market feature pipeline in Polars with XGBoost prediction"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "alpha-vantage>=2.3.1",
+    "polars>=0.20.0",
+    "python-dotenv>=1.0.0",
+    "pyarrow>=14.0.0",
+    "xgboost>=2.0.0",
+    "scikit-learn>=1.3.0",
+    "jupyter>=1.0.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
