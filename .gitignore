@@ -205,3 +205,23 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Project-specific
+# Data directories (raw and processed data files)
+data/
+
+# Trained models
+models/
+
+# Data files
+*.parquet
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Local environment variants
+.env.local
